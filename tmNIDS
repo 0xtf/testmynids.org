@@ -35,13 +35,18 @@ test_tor () {
 }
 
 test_exe () {
-    curl -s http://testmynids.org/exe/calc.exe -o /tmp/calc.exe > /dev/null
+    curl -s http://testmynids.org/exe/calc.exe -o /tmp/calc.exe
 }
+
+test_pdf () {
+    curl -s testmynids.org/pdf/pdf.pdf -o /tmp/pdf.pdf 
+}
+
 
 # Presentation and menu
 
 while true; do
-    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "Quit!")
+    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "PDF with Embedded File" "Quit!")
 
     clear
 
@@ -66,7 +71,8 @@ while true; do
             4) test_badcas; break ;;
             5) test_tor; break ;;
             6) test_exe; break ;;
-            7) break 7 ;;
+            7) test_pdf; break ;;
+            8) break 8 ;;
             *) echo "Invalid option!" >&2
         esac
     done

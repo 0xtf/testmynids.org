@@ -26,6 +26,7 @@ After downloading the script, make it executable *(chmod +x tmNIDS)* and run it 
 * Known bad CA's (HTTPS)
 * Tor .onion response and random Tor nodes connection (DNS & HTTPS)
 * EXE download over HTTP *(from AWS S3)* & Packed Executable (HTTP)
+* PDF download over HTTP with Embedded File (HTTP)
 
 ## Have an idea for a new test?
 
