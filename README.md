@@ -14,6 +14,10 @@ There are two parts to it:
 
 Easiet way is to download and run the [script](./tmnids.sh) *(only requirements are wget, curl and nc, which should be included in your distro)*. You can also run the tests manually by looking at the script.
 
+After downloading the script, make it executable *(chmod +x tmnids.sh)* and run it to be presented with the wizard:
+
+**./tmnidssh**
+
 ## Included tests
 
 * Linux UID
@@ -24,7 +28,7 @@ Easiet way is to download and run the [script](./tmnids.sh) *(only requirements 
 
 ## Have an idea for a new test?
 
-Please let me know. Purpose of this project is to be community-driven and we want to provide a framework that allows for testing of as many as possible protocols *(DNS, SMTP, HTTP, etc)*.
+Please let me know. Purpose of this project is to be community-driven. We also want to provide a framework that allows for testing of as many different as possible protocols *(DNS, SMTP, HTTP, etc)*.
 
 ## Why? What about _insert_project_here_?
 
@@ -32,6 +36,6 @@ I'm aware that other websites, projects or scripts exist. I created this one bec
 
 * lacking features
 * no longer supported 
-* not portable enough.
+* not portable enough
 
 Choose whatever works best for you.
