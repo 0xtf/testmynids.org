@@ -25,6 +25,7 @@ After downloading the script, make it executable *(chmod +x tmnids.sh)* and run 
 * Several known malware-related user agents (HTTP)
 * Known bad CA's (HTTPS)
 * Tor .onion response and random Tor nodes connection (DNS & HTTPS)
+* EXE download over HTTP *(from AWS S3)* & Packed Executable (HTTP)
 
 ## Have an idea for a new test?
 
