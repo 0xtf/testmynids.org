@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Define all the tests
+
+test_uid () {
+    curl -s http://testmynids.org/uid/index.html > /dev/null
+    echo ""
+    echo "Done!"
+}
+
+test_basicauth () {
+    curl -H "Authorization: Basic cm9vdDpyb290" testmynids.org > /dev/null
+}
+
+test_useragent () {
+    curl -s -A "BlackSun" testmynids.org > /dev/null
+    curl -s -A "HttpDownload" testmynids.org > /dev/null
+    curl -s -A "agent" testmynids.org > /dev/null
+    curl -s -A "MSIE" testmynids.org > /dev/null
+}
+
+test_badcas () {
+    curl -s https://edellroot.badssl.com/ > /dev/null
+    curl -s https://superfish.badssl.com/ > /dev/null
+}
+
+test_tor () {
+    # Sample response with .onion
+    dig a 3wzn5p2yiumh7akj.onion @8.8.8.8 > /dev/null
+
+    # Retrieve Tor IP list and connect to 10
+    wget --quiet https://torstatus.blutmagie.de/ip_list_all.php/Tor_ip_list_ALL.csv -O /tmp/tor.csv >/dev/null 2>&1
+    # Randomize it
+    sort --random-sort /tmp/tor.csv > /tmp/randomtor.csv
+    # Connect to them
+    head -n10 /tmp/randomtor.csv | while read line; do nc -z -w 4 $line 443 2>&1; done
+}
+
+test_exe () {
+    curl -s http://testmynids.org/exe/calc.exe -o /tmp/calc.exe > /dev/null
+}
+
+# Presentation and menu
+
+while true; do
+    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IP" "EXE or DLL download over HTTP" "Quit!")
+
+    clear
+    echo ""
+    echo "Welcome to tmNIDS!"
+    echo "Choose which test you'd like to run: "
+    echo ""
+    select opt in "${options[@]}"; do
+        case $REPLY in
+            1) test_uid; break ;;
+            2) test_basicauth; break ;;
+            3) test_useragent; break ;;
+            4) test_badcas; break ;;
+            5) test_tor; break ;;
+            6) test_exe; break ;;
+            7) break 7 ;;
+            *) echo "Invalid option!" >&2
+        esac
+    done
+done
+
+echo ""
+echo "ktkxbye!"
