@@ -20,11 +20,11 @@ After downloading the script, make it executable *(chmod +x tmnids.sh)* and run 
 
 ## Included tests
 
-* Linux UID
-* HTTP Basic Authenticatio over clear text
-* Several known malware-related user agents
-* HTTPS - Known bad CA's
-* Tor - .onion response and random Tor nodes connection
+* Linux UID (HTTP)
+* Basic Authentication over clear text (HTTP)
+* Several known malware-related user agents (HTTP)
+* Known bad CA's (HTTPS)
+* Tor .onion response and random Tor nodes connection (DNS & HTTPS)
 
 ## Have an idea for a new test?
 
