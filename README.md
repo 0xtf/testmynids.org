@@ -16,8 +16,6 @@ Easiet way is to download and run the [script](./tmNIDS) *(only requirements are
 
 After downloading the script, make it executable *(chmod +x tmNIDS)* and run it to be presented with the wizard:
 
-**./tmNIDS**
-
 ![image](./assets/imgs/screenshot.png)
 
 ## Included tests
