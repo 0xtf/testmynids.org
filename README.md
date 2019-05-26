@@ -7,12 +7,12 @@ A simple project that aims to centralize testing of network intrusion detection 
 
 There are two parts to it:
 
-* A website - that is used to hold some tests/files
-* A script - That runs/simulates interaction with the website or with 3rd party website, meant to be executed on the client for which you want to test coverage of your NIDS.
+* **A website** - that is used to hold some tests/files. It will also hold sub-domains and DNS records for when testing via DNS is required.
+* **A script** - That runs/simulates interaction with the website or with 3rd party website, meant to be executed on the client for which you want to test coverage of your NIDS sensor.
 
 ## Usage
 
-Easiet way is to download and run the [script](./tmnids.sh). You can also run the tests manually by looking at the script.
+Easiet way is to download and run the [script](./tmnids.sh) *(only requirements are wget, curl and nc, which should be included in your distro)*. You can also run the tests manually by looking at the script.
 
 ## Included tests
 
@@ -21,8 +21,6 @@ Easiet way is to download and run the [script](./tmnids.sh). You can also run th
 * Several known malware-related user agents
 * HTTPS - Known bad CA's
 * Tor - .onion response and random Tor nodes connection
-
-If you want to run the tests manually, you can. To make things a bit easier, the script in this repository *(only requirements are wget, curl and nc, which should be included in your distro)* does make all the tests available from a single file.
 
 ## Have an idea for a new test?
 
