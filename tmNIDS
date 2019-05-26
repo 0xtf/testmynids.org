@@ -46,7 +46,7 @@ test_pdf () {
 # Presentation and menu
 
 while true; do
-    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "PDF with Embedded File" "Quit!")
+    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "PDF download with Embedded File" "Quit!")
 
     clear
 
