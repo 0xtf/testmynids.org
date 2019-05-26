@@ -4,8 +4,6 @@
 
 test_uid () {
     curl -s http://testmynids.org/uid/index.html > /dev/null
-    echo ""
-    echo "Done!"
 }
 
 test_basicauth () {
