@@ -12,7 +12,7 @@ There are two parts to it:
 
 ## Usage
 
-Easiet way is to download and run the [script](./tmNIDS) *(only requirements are wget, curl and nc, which should be included in your distro)*. You can also run the tests manually by looking at the script.
+Easiet way is to download and run the [script](./tmNIDS) *(only requirements are curl and nc, which should be included in your distro)*. You can also run the tests manually by looking at the script.
 
 After downloading the script, make it executable *(chmod +x tmNIDS)* and run it to be presented with the wizard:
 
