@@ -32,9 +32,11 @@ After downloading the script, make it executable *(chmod +x tmNIDS)* and run it 
 
 Please let me know. Purpose of this project is to be community-driven. We also want to provide a framework that allows for testing of as many different as possible protocols *(DNS, SMTP, HTTP, etc)*.
 
-## Why? What about _insert_project_here_?
+## Why? What about _insert_project\_here_?
 
-I'm aware that other websites, projects or scripts exist. I created this one because the existing ones were
+**Why** - We can check if a NIDS engine is working with a simple rule. In most cases, a ping would do. From that moment on, it becomes a matter of rulesets if detection is working or not. The purpose of this project is more to quickly showcase detection and verify detection of as many protocols as possible, while keeping the whole process quick and simple.
+
+**Other projects** - I'm aware that other websites, projects or scripts exist. I created this one because the existing ones were
 
 * lacking features
 * no longer supported 
