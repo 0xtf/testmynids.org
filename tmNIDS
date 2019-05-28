@@ -27,7 +27,7 @@ test_tor () {
     dig a 3wzn5p2yiumh7akj.onion @8.8.8.8 > /dev/null
 
     # Retrieve Tor IP list and connect to 10
-    wget --quiet https://torstatus.blutmagie.de/ip_list_all.php/Tor_ip_list_ALL.csv -O /tmp/tor.csv >/dev/null 2>&1
+    curl -s https://torstatus.blutmagie.de/ip_list_all.php/Tor_ip_list_ALL.csv -o /tmp/tor.csv >/dev/null 2>&1
     # Randomize it
     sort --random-sort /tmp/tor.csv > /tmp/randomtor.csv
     # Connect to them
