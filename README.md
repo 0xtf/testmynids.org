@@ -27,6 +27,7 @@ After downloading the script, make it executable *(chmod +x tmNIDS)* and run it 
 * Tor .onion response and random Tor nodes connection (DNS & HTTPS)
 * EXE download over HTTP *(from AWS S3)* & Packed Executable (HTTP)
 * PDF download over HTTP with Embedded File (HTTP)
+* Simulate an outbound SSH scan (SSH)
 
 ## Have an idea for a new test?
 
