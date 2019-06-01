@@ -46,11 +46,17 @@ test_22scan () {
     nc testmynids.org 22 -w3 > /dev/null
 }
 
+test_miscdns () {
+    dig sinkhole.cert.pl @8.8.8.8 > /dev/null
+    dig nic.su @8.8.8.8 > /dev/null
+    dig invalid.no-ip.com @8.8.8.8 > /dev/null
+}
+
 
 # Presentation and menu
 
 while true; do
-    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "PDF download with Embedded File" "Simulate SSH Outbound Scan" "Quit!")
+    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "PDF download with Embedded File" "Simulate SSH Outbound Scan" "Miscellaneous domains (TLD's, Sinkhole, DDNS, etc)" "Quit!")
 
     clear
 
@@ -77,7 +83,8 @@ while true; do
             6) test_exe; break ;;
             7) test_pdf; break ;;
             8) test_22scan; break ;;
-            9) break 9 ;;
+            9) test_miscdns; break ;;
+            10) break 10 ;;
             *) echo "Invalid option!" >&2
         esac
     done

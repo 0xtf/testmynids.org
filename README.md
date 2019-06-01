@@ -28,6 +28,7 @@ After downloading the script, make it executable *(chmod +x tmNIDS)* and run it 
 * EXE download over HTTP *(from AWS S3)* & Packed Executable (HTTP)
 * PDF download over HTTP with Embedded File (HTTP)
 * Simulate an outbound SSH scan (SSH)
+* Miscellaneous domains *(TLD's, Sinkhole, DDNS, etc)*
 
 ## Have an idea for a new test?
 
