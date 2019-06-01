@@ -36,7 +36,7 @@ Please let me know. Purpose of this project is to be community-driven. We also w
 
 ## Why? What about _insert_project\_here_?
 
-**Why** - We can check if a NIDS engine is working with a simple rule. In most cases, a ping would do. From that moment on, it becomes a matter of rulesets if detection is working or not. The purpose of this project is more to quickly showcase detection and verify detection of as many protocols as possible, while keeping the whole process quick and simple.
+**Why** - We can check if a NIDS engine is working with a simple rule. In most cases, a ping would do. From that moment on, it becomes a matter of rulesets if detection is working or not. The purpose of this project is to quickly showcase detection and verify detection of as many protocols as possible, while keeping the whole process quick and simple.
 
 **Other projects** - I'm aware that other websites, projects or scripts exist. I created this one because the existing ones were
 
