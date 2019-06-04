@@ -15,6 +15,7 @@ test_useragent () {
     curl -s -A "HttpDownload" testmynids.org > /dev/null
     curl -s -A "agent" testmynids.org > /dev/null
     curl -s -A "MSIE" testmynids.org > /dev/null
+    curl -s -A "JEDI-VCL" testmynids.org > /dev/null
 }
 
 test_badcas () {
