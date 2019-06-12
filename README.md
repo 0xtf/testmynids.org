@@ -23,12 +23,13 @@ After downloading the script, make it executable *(chmod +x tmNIDS)* and run it 
 * Linux UID (HTTP)
 * Basic Authentication over clear text (HTTP)
 * Several known malware-related user agents (HTTP)
-* Known bad CA's (HTTPS)
+* Known bad CA's (TLS)
 * Tor .onion response and random Tor nodes connection (DNS & HTTPS)
 * EXE download over HTTP *(from AWS S3)* & Packed Executable (HTTP)
 * PDF download over HTTP with Embedded File (HTTP)
 * Simulate an outbound SSH scan (SSH)
 * Miscellaneous *(TLD's, Sinkhole, DDNS, etc)* domains (DNS)
+* MD5 in TLS Certificate (TLS)
 
 ## Have an idea for a new test?
 
