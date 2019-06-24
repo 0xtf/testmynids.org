@@ -14,6 +14,11 @@ There are two parts to it:
 
 Easiet way is to download and run the [script](./tmNIDS) *(only requirements are curl and nc, which should be included in your distro)*. You can also run the tests manually by looking at the script.
 
+**One-liner to download and execute:** 
+```
+curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
+```
+
 After downloading the script, make it executable *(chmod +x tmNIDS)* and run it to be presented with the wizard:
 
 ![image](./assets/imgs/screenshot.png)
