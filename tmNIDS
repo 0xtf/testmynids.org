@@ -7,7 +7,7 @@ test_uid () {
 }
 
 test_basicauth () {
-    curl -H "Authorization: Basic cm9vdDpyb290" testmynids.org > /dev/null
+    curl -s -H "Authorization: Basic cm9vdDpyb290" testmynids.org > /dev/null
 }
 
 test_useragent () {
@@ -64,7 +64,7 @@ test_md5rsa () {
 # Presentation and menu
 
 while true; do
-    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "PDF download with Embedded File" "Simulate SSH Outbound Scan" "Miscellaneous domains (TLD's, Sinkhole, DDNS, etc)" "MD5 in TLS Certificate Signature" "Quit!")
+    options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "PDF download with Embedded File" "Simulate SSH Outbound Scan" "Miscellaneous domains (TLD's, Sinkhole, DDNS, etc)" "MD5 in TLS Certificate Signature" "CHAOS! RUN ALL!" "Quit!")
 
     clear
 
@@ -93,7 +93,8 @@ while true; do
             8) test_22scan; break ;;
             9) test_miscdns; break ;;
             10) test_md5rsa; break ;;
-            11) break 11 ;;
+            11) test_uid; test_basicauth; test_useragent; test_badcas; test_tor; test_exe; test_pdf; test_22scan; test_miscdns; test_md5rsa; break ;;
+            12) break 12 ;;
             *) echo "Invalid option!" >&2
         esac
     done
