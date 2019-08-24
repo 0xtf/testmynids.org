@@ -33,6 +33,9 @@ test_tor () {
     sort --random-sort /tmp/tor.csv > /tmp/randomtor.csv
     # Connect to them
     head -n10 /tmp/randomtor.csv | while read line; do nc -z -w 4 $line 443 2>&1; done
+    # Clean temporary files
+    rm /tmp/tor.csv
+    rm /tmp/randomtor.csv
 }
 
 test_exe () {
