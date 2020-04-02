@@ -28,14 +28,14 @@ test_tor () {
     dig a 3wzn5p2yiumh7akj.onion @8.8.8.8 > /dev/null
 
     # Retrieve Tor IP list and connect to 10
-    curl -s https://torstatus.blutmagie.de/ip_list_all.php/Tor_ip_list_ALL.csv -o /tmp/tor.csv >/dev/null 2>&1
+    curl -s https://raw.githubusercontent.com/SecOps-Institute/Tor-IP-Addresses/master/tor-nodes.lst -o /tmp/tor.list >/dev/null 2>&1
     # Randomize it
-    sort --random-sort /tmp/tor.csv > /tmp/randomtor.csv
+    sort --random-sort /tmp/tor.list > /tmp/randomtor.list
     # Connect to them
-    head -n10 /tmp/randomtor.csv | while read line; do nc -z -w 4 $line 443 2>&1; done
+    head -n10 /tmp/randomtor.list | while read line; do nc -z -w 4 $line 443 2>&1; done
     # Clean temporary files
-    rm /tmp/tor.csv
-    rm /tmp/randomtor.csv
+    rm /tmp/tor.list
+    rm /tmp/randomtor.list
 }
 
 test_exe () {
