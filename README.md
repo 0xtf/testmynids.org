@@ -40,7 +40,7 @@ After downloading **tmNIDS** make it executable *(chmod +x tmNIDS)* and run it *
 
 ## Have an idea for a new test?
 
-Please let me know. Purpose of this project is to be community-driven. We also want to provide a framework that allows for testing of as many protocols as possible *(DNS, SMTP, HTTP, etc)*.
+Please [et me know](https://twitter.com/0xtf). Purpose of this project is to be community-driven. We also want to provide a framework that allows for testing of as many protocols as possible *(DNS, SMTP, HTTP, etc)*.
 
 ## Why? What about _insert_project\_here_?
 
