@@ -148,7 +148,7 @@ do
       - $test_miscdns_name (run with -9)\n \
       - $test_md5rsa_name (run with -10)\n \
       - CHAOS! Run all! (run with -99)\n"
-    echo -e "Example (runs test 7): ./tmnids -7\n"
+    echo -e "Example (runs Test 7 - PDF download with Embedded File): ./tmnids -7\n"
   fi
 
   if [ "$arg" == "-1" ] 
