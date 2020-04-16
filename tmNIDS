@@ -147,7 +147,7 @@ do
       - $test_22scan_name (run with -8)\n \
       - $test_miscdns_name (run with -9)\n \
       - $test_md5rsa_name (run with -10)\n \
-      - CHAOS! Run all! (run with -11)\n"
+      - CHAOS! Run all! (run with -99)\n"
     echo -e "Example (runs test 7): ./tmnids -7\n"
   fi
 
