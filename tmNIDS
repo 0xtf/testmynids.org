@@ -1,6 +1,23 @@
 #!/bin/bash
 
-# Define all the tests
+##############################
+##   Define all the tests    #
+##############################
+
+# Let's start naming them
+
+test_uid_name="Linux UID"
+test_basicauth_name="HTTP Basic Authentication"
+test_useragent_name="HTTP Malware User-Agent"
+test_badcas_name="Bad Certificate Authorities"
+test_tor_name="Tor .onion DNS response and known IPs connection"
+test_exe_name="EXE or DLL download over HTTP"
+test_pdf_name="PDF download with Embedded File"
+test_22scan_name="Simulate SSH Outbound Scan"
+test_miscdns_name="Miscellaneous domains (TLD's, Sinkhole, DDNS, etc)"
+test_md5rsa_name="MD5 in TLS Certificate Signature"
+
+# Define the actual test 
 
 test_uid () {
   curl -s http://testmynids.org/uid/index.html > /dev/null
@@ -64,10 +81,25 @@ test_md5rsa () {
     done
 }
 
-# Interactive mode - Presentation and menu
+# Script mode
+# Check if user wants to active or clear the killswitch
+#for arg in "$@"
+#do
+#  if [ "$arg" == "--list" ] || [ "$arg" == "-l" ]
+#  then
+#  fi
+
+#  if [ "$arg" == "--clear" ] || [ "$arg" == "-c" ]
+#  then
+#  fi
+#done
+
+##############################
+#     Interactive Mode       #
+##############################
 
 while true; do
-  options=("Linux UID" "HTTP Basic Authentication" "HTTP Malware User-Agent" "Bad Certificate Authorities" "Tor .onion DNS response and known IPs connection" "EXE or DLL download over HTTP" "PDF download with Embedded File" "Simulate SSH Outbound Scan" "Miscellaneous domains (TLD's, Sinkhole, DDNS, etc)" "MD5 in TLS Certificate Signature" "CHAOS! RUN ALL!" "Quit!")
+  options=("$test_uid_name" "$test_basicauth_name" "$test_useragent_name" "$test_badcas_name" "$test_tor_name" "$test_exe_name" "$test_pdf_name" "$test_22scan_name" "$test_miscdns_name" "$test_md5rsa_name" "CHAOS! RUN ALL!" "Quit!")
 
   clear
 
