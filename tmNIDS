@@ -60,7 +60,8 @@ test_exe () {
 }
 
 test_pdf () {
-  curl -s testmynids.org/pdf/pdf.pdf -o /tmp/pdf.pdf 
+  curl -s testmynids.org/pdf/pdf.pdf -o /tmp/tmnidspdf.pdf 
+  rm /tmp/tmnidspdf.pdf
 }
 
 test_22scan () {
@@ -81,22 +82,12 @@ test_md5rsa () {
     done
 }
 
-# Script mode
-# Check if user wants to active or clear the killswitch
-#for arg in "$@"
-#do
-#  if [ "$arg" == "--list" ] || [ "$arg" == "-l" ]
-#  then
-#  fi
-
-#  if [ "$arg" == "--clear" ] || [ "$arg" == "-c" ]
-#  then
-#  fi
-#done
-
 ##############################
 #     Interactive Mode       #
 ##############################
+
+# No arguments assumes interactive mode
+if [ -z "$*" ]; then
 
 while true; do
   options=("$test_uid_name" "$test_basicauth_name" "$test_useragent_name" "$test_badcas_name" "$test_tor_name" "$test_exe_name" "$test_pdf_name" "$test_22scan_name" "$test_miscdns_name" "$test_md5rsa_name" "CHAOS! RUN ALL!" "Quit!")
@@ -134,6 +125,85 @@ while true; do
   esac
   done
 done
+# below comes from if argument
+fi
 
-echo ""
-echo "ktkxbye!"
+##############################
+#        Script Mode         #
+##############################
+
+for arg in "$@"
+do
+  if [ "$arg" == "--list" ] || [ "$arg" == "-l" ] || [ "$arg" == "--help" ] || [ "$arg" == "-h" ]
+  then
+    echo -e "\nThese are the available tests:\n\n \
+      - $test_uid_name (run with -1)\n \
+      - $test_basicauth_name (run with -2)\n \
+      - $test_useragent_name (run with -3)\n \
+      - $test_badcas_name (run with -4)\n \
+      - $test_tor_name (run with -5)\n \
+      - $test_exe_name (run with -6)\n \
+      - $test_pdf_name (run with -7)\n \
+      - $test_22scan_name (run with -8)\n \
+      - $test_miscdns_name (run with -9)\n \
+      - $test_md5rsa_name (run with -10)\n \
+      - CHAOS! Run all! (run with -11)\n"
+    echo -e "Example (runs test 7): ./tmnids -7\n"
+  fi
+
+  if [ "$arg" == "-1" ] 
+  then
+    test_uid  
+  fi
+
+  if [ "$arg" == "-2" ]
+  then
+    test_basicauth
+  fi
+
+  if [ "$arg" == "-3" ]
+  then
+    test_useragent
+  fi
+
+  if [ "$arg" == "-4" ] 
+  then
+    test_badcas
+  fi
+
+  if [ "$arg" == "-5" ]
+  then
+    test_tor
+  fi
+
+  if [ "$arg" == "-6" ]
+  then
+    test_exe
+  fi
+
+  if [ "$arg" == "-7" ]
+  then
+    test_pdf
+  fi
+
+  if [ "$arg" == "-8" ]
+  then
+    test_22scan
+  fi
+
+  if [ "$arg" == "-9" ]
+  then
+    test_miscdns
+  fi
+
+  if [ "$arg" == "-10" ]
+  then
+    test_md5rsa
+  fi
+
+  if [ "$arg" == "-99" ]
+  then
+    test_uid; test_basicauth; test_useragent; test_badcas; test_tor; test_exe; test_pdf; test_22scan; test_miscdns; test_md5rsa;
+  fi
+
+done
