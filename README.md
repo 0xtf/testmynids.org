@@ -14,29 +14,47 @@ There are two parts to it:
 
 ## Usage
 
-**One-liner to download and execute:** 
+Only requirements are `curl` and `nc`, which should be included in your distribution.
+
+**One-liner to download and execute in interactive mode:** 
 ```
 curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
 ```
 
-To do it manually, download and run the [script](./tmNIDS) *(only requirements are curl and nc, which should be included in your distro)*. You can also run the tests yourself *(outside of tmNIDS)* by looking at the script.
+**One-liner to download and execute in script mode:** 
+```
+curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS -h
+```
+
+### Interactive mode
+
+To run tmNIDS in interactive mode without using the one-liner, download and run the [script](./tmNIDS)
 
 After downloading **tmNIDS** make it executable *(chmod +x tmNIDS)* and run it *(./tmNIDS)* to be presented with the wizard:
 
 ![image](./assets/imgs/screenshot.png)
 
-## Included tests
+### Script mode
 
-* Linux UID (HTTP)
-* Basic Authentication over clear text (HTTP)
-* Several known malware-related user agents (HTTP)
-* Known bad CA's (TLS)
-* Tor .onion response and random Tor nodes connection (DNS & HTTPS)
-* EXE download over HTTP *(from AWS S3)* & Packed Executable (HTTP)
-* PDF download over HTTP with Embedded File (HTTP)
-* Simulate an outbound SSH scan (SSH)
-* Miscellaneous *(TLD's, Sinkhole, DDNS, etc)* domains (DNS)
-* MD5 in TLS Certificate (TLS)
+To run tmNIDS in script mode without using the one-liner, download and run the [script](./tmNIDS --help) 
+
+After downloading **tmNIDS** make it executable *(chmod +x tmNIDS)* and run it *(./tmNIDS -h)* to be presented with the script options.
+
+In summary, the usage of `./tmNIDS -N`, where N is the number of the test, will run the designated test for you.
+
+# Included tests
+
+* Test 1 - Linux UID (HTTP)
+* Test 2 - Basic Authentication over clear text (HTTP)
+* Test 3 - Several known malware-related user agents (HTTP)
+* Test 4 - Known bad CA's (TLS)
+* Test 5 - Tor .onion response and random Tor nodes connection (DNS & HTTPS)
+* Test 6 - EXE download over HTTP *(from AWS S3)* & Packed Executable (HTTP)
+* Test 7 - PDF download over HTTP with Embedded File (HTTP)
+* Test 8 - Simulate an outbound SSH scan (SSH)
+* Test 9 - Miscellaneous *(TLD's, Sinkhole, DDNS, etc)* domains (DNS)
+* Test 10 - MD5 in TLS Certificate (TLS)
+* Test 99 - CHAOS! Run all tests!
 
 ## Have an idea for a new test?
 
