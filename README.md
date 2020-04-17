@@ -25,6 +25,7 @@ curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o
 ```
 curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS -h
 ```
+*Tip: Replace the -h with -N (where N is the test you want - see table below) at the end of the one-liner to automatically run the desired test*
 
 ### Interactive mode
 
@@ -44,17 +45,19 @@ In summary, the usage of `./tmNIDS -N`, where N is the number of the test, will 
 
 # Included tests
 
-* Test 1 - Linux UID (HTTP)
-* Test 2 - Basic Authentication over clear text (HTTP)
-* Test 3 - Several known malware-related user agents (HTTP)
-* Test 4 - Known bad CA's (TLS)
-* Test 5 - Tor .onion response and random Tor nodes connection (DNS & HTTPS)
-* Test 6 - EXE download over HTTP *(from AWS S3)* & Packed Executable (HTTP)
-* Test 7 - PDF download over HTTP with Embedded File (HTTP)
-* Test 8 - Simulate an outbound SSH scan (SSH)
-* Test 9 - Miscellaneous *(TLD's, Sinkhole, DDNS, etc)* domains (DNS)
-* Test 10 - MD5 in TLS Certificate (TLS)
-* Test 99 - CHAOS! Run all tests!
+| Test ID | Name                                                              |  Protocols used
+|---------|-------------------------------------------------------------------|----------------|
+| Test 1  | Linux UID                                                         | HTTP           |
+| Test 2  | Basic Authentication over clear text                               | HTTP           |
+| Test 3  | Several known malware-related user agents                          | HTTP           |
+| Test 4  | Known bad CA's                                                     | TLS            |
+| Test 5  | Tor .onion response and random Tor nodes connection                | DNS & TLS      |
+| Test 6  | EXE download over HTTP *(from AWS S3)* & Packed Executable         | HTTP           |
+| Test 7  | PDF download over HTTP with Embedded File                          | HTTP           |
+| Test 8  | Simulate an outbound SSH scan                                      | SSH            |
+| Test 9  | Miscellaneous *(TLD's, Sinkhole, DDNS, etc)* domains               | DNS            |
+| Test 10 | MD5 in TLS Certificate                                            | TLS            |
+| Test 99 | CHAOS! Run all tests!                                             | ☝️ ALL          |
 
 ## Have an idea for a new test?
 
