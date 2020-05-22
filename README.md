@@ -29,7 +29,7 @@ curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o
 
 ### Interactive mode
 
-To run tmNIDS in interactive mode without using the one-liner, download and run the [script](./tmNIDS)
+To run tmNIDS in interactive mode without using the one-liner, download and run the [script](./tmNIDS).
 
 After downloading **tmNIDS** make it executable *(chmod +x tmNIDS)* and run it *(./tmNIDS)* to be presented with the wizard:
 
@@ -37,7 +37,7 @@ After downloading **tmNIDS** make it executable *(chmod +x tmNIDS)* and run it *
 
 ### Script mode
 
-To run tmNIDS in script mode without using the one-liner, download and run the [script](./tmNIDS --help) 
+To run tmNIDS in script mode without using the one-liner, download and run the [script](./tmNIDS). 
 
 After downloading **tmNIDS** make it executable *(chmod +x tmNIDS)* and run it *(./tmNIDS -h)* to be presented with the script options.
 
