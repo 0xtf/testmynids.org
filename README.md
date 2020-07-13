@@ -47,17 +47,17 @@ In summary, the usage of `./tmNIDS -N`, where N is the number of the test, will 
 
 | Test ID | Name                                                              |  Protocols used
 |---------|-------------------------------------------------------------------|----------------|
-| Test 1  | Linux UID                                                         | HTTP           |
-| Test 2  | Basic Authentication over clear text                               | HTTP           |
-| Test 3  | Several known malware-related user agents                          | HTTP           |
-| Test 4  | Known bad CA's                                                     | TLS            |
-| Test 5  | Tor .onion response and random Tor nodes connection                | DNS & TLS      |
-| Test 6  | EXE download over HTTP *(from AWS S3)* & Packed Executable         | HTTP           |
-| Test 7  | PDF download over HTTP with Embedded File                          | HTTP           |
-| Test 8  | Simulate an outbound SSH scan                                      | SSH            |
-| Test 9  | Miscellaneous *(TLD's, Sinkhole, DDNS, etc)* domains               | DNS            |
-| Test 10 | MD5 in TLS Certificate                                            | TLS            |
-| Test 99 | CHAOS! Run all tests!                                             | ☝️ ALL          |
+|    1    | Linux UID                                                         | HTTP           |
+|    2    | Basic Authentication over clear text                              | HTTP           |
+|    3    | Several known malware-related user agents                         | HTTP           |
+|    4    | Known bad CA's                                                    | TLS            |
+|    5    | Tor .onion response and random Tor nodes connection               | DNS & TLS      |
+|    6    | EXE download over HTTP *(from AWS S3)* & Packed Executable        | HTTP           |
+|    7    | PDF download over HTTP with Embedded File                         | HTTP           |
+|    8    | Simulate an outbound SSH scan                                     | SSH            |
+|    9    | Miscellaneous *(TLD's, Sinkhole, DDNS, etc)* domains              | DNS            |
+|   10    | MD5 in TLS Certificate                                            | TLS            |
+|   99    | CHAOS! Run all tests!                                             | ☝️ ALL          |
 
 ## Have an idea for a new test?
 
@@ -65,9 +65,9 @@ Please [let me know](https://twitter.com/0xtf). Purpose of this project is to be
 
 ## Why? What about _insert_project\_here_?
 
-**Why** - We can check if a NIDS engine is working with a simple rule. In most cases, a ping would do. From that moment on, it becomes a matter of rulesets if detection is working or not. The purpose of this project is to quickly verify and showcase detection of as many protocols as possible, while keeping the whole process quick, portable and simple.
+**Why** - We can check if a NIDS engine is working with a simple rule. In most cases, a ping would do. From that moment on it becomes a matter of rulesets if detection is working or not. The purpose of this project is to quickly verify and showcase detection of as many protocols as possible, while keeping the whole process quick, portable and simple.
 
-**Other projects** - I'm aware that other websites, projects or scripts exist. I created this one because the existing ones were
+**Other projects** - I'm aware that other websites, projects and scripts exist. I created this one because the existing ones were
 
 * lacking features
 * no longer supported 
