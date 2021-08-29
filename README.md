@@ -1,6 +1,6 @@
 <img align="right" width="260" height="447" src="./assets/imgs/tmnids-mascot-small.png">
 
-# THIS PROJECT HAS A NEW HOME! 
+# THIS PROJECT HAS A NEW HOME
 [https://github.com/3CORESec/testmynids.org](https://github.com/3CORESec/testmynids.org)!
 
 ## Update your scripts
